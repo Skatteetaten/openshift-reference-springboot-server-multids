@@ -1,0 +1,25 @@
+logging:
+    level:
+      ske.aurora: INFO
+      no.skatteetaten: INFO
+      org:
+        springframework: WARN
+        apache.catalina: WARN
+        hibernate: WARN
+
+management:
+    server.port: 8081
+
+spring:
+  flyway:
+    enabled: false
+
+datasources:
+  customer:
+    url: jdbc:postgresql://localhost:15432/postgres
+    username: postgres
+    password: postgres
+  sales:
+    url: jdbc:postgresql://localhost:25432/postgres
+    username: postgres
+    password: postgres
