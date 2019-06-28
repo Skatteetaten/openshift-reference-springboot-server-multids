@@ -27,7 +27,7 @@ class FlywayMigrations {
     @PostConstruct
     public void migrateSales() {
 
-        Flyway.configure().dataSource(dataSourceSales).outOfOrder(true).locations("db/customer/migration").load()
+        Flyway.configure().dataSource(dataSourceSales).outOfOrder(true).locations("db/sales/migration").load()
             .migrate();
     }
 }
