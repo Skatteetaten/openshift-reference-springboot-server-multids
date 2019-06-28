@@ -1,1 +1,1 @@
-insert into transaction (description, amount) values ('Diverse tjenester', 100000);
+insert into transaction (id, description, amount) values (1, 'Diverse tjenester', 100000);

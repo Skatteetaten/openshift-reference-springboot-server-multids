@@ -1,6 +1,6 @@
 create table transaction
 (
-  id          serial,
+  id          integer,
   description varchar(255),
   amount      integer
 );

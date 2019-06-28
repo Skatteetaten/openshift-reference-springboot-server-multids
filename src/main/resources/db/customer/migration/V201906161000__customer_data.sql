@@ -1,1 +1,1 @@
-insert into customer (name) values ('Skatteetaten');
+insert into customer (id, name) values (1, 'Skatteetaten');

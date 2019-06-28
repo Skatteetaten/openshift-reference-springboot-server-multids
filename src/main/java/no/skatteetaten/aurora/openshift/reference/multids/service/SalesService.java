@@ -15,6 +15,11 @@ public class SalesService {
 
     private JdbcTemplate jdbc;
 
+    /**
+     * Injection by bean name. Use whichever strategy you find appropriate.
+     *
+     * @param dataSourceSales
+     */
     public SalesService(DataSource dataSourceSales) {
         this.jdbc = new JdbcTemplate(dataSourceSales);
     }

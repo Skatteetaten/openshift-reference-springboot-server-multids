@@ -1,5 +1,5 @@
 create table customer
 (
-  id          serial,
+  id          integer,
   name        varchar(255)
 );

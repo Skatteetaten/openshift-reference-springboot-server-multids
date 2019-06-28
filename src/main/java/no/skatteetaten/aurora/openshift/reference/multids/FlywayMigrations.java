@@ -7,16 +7,26 @@ import org.flywaydb.core.Flyway;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-class FlywayMigrations {
+public class FlywayMigrations {
 
     private DataSource dataSourceCustomer;
     private DataSource dataSourceSales;
 
+    /**
+     * Injects the two datasources by their bean name. There are several strategies that can be used here,
+     * like @Qualifier or dedicated custom annotations. Bean name is used here for simplicity.
+     *
+     * @param dataSourceCustomer
+     * @param dataSourceSales
+     */
     public FlywayMigrations(DataSource dataSourceCustomer, DataSource dataSourceSales) {
         this.dataSourceCustomer = dataSourceCustomer;
         this.dataSourceSales = dataSourceSales;
     }
 
+    /**
+     * Loads migrations for the customer database and runs them.
+     */
     @PostConstruct
     public void migrateCustomer() {
 
